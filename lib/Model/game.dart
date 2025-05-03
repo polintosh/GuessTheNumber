@@ -45,7 +45,7 @@ class Game {
     marks.add(Mark(score: score, dateTime: DateTime.now()));
     marks.sort((a, b) => b.score.compareTo(a.score));
     if (marks.length > 5) {
-      marks.sublist(0, 5);
+      marks = marks.sublist(0, 5);
     }
   }
 

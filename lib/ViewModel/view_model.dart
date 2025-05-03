@@ -21,6 +21,9 @@ class ViewModel extends ChangeNotifier {
   }
 
   void restartGame() {
+    if (_game.score > 0) {
+      _game.addMark(_game.score);
+    }
     _game.restartGame();
     notifyListeners();
   }

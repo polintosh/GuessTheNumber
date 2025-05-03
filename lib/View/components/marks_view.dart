@@ -7,7 +7,10 @@ class MarksView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final viewModel = Provider.of<ViewModel>(context);
+    // The key difference between these two methods is:
+    // Provider.of only gets the value once and doesn't update automatically
+    // context.watch subscribes to changes and rebuilds the widget when ViewModel notifies changes
+    final viewModel = context.watch<ViewModel>();
     final topMarks = viewModel.getTopMarks();
 
     return Scaffold(
