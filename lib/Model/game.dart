@@ -1,8 +1,11 @@
 import 'dart:math';
 
+import 'package:flutter_guess_the_number/model/mark.dart';
+
 class Game {
   static final int minValue = 0;
   static final int maxValue = 100;
+  List<Mark> marks = [];
 
   int _targetValue = 0;
   int _points = 0;
@@ -36,5 +39,18 @@ class Game {
     _points = 0;
     _score = 0;
     _rounds = 0;
+  }
+
+  void addMark(int score) {
+    marks.add(Mark(score: score, dateTime: DateTime.now()));
+    marks.sort((a, b) => b.score.compareTo(a.score));
+    if (marks.length > 5) {
+      marks.sublist(0, 5);
+    }
+  }
+
+  // Not void - Because returns object
+  List<Mark> getTopMarks() {
+    return marks;
   }
 }

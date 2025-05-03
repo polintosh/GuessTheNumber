@@ -23,4 +23,9 @@ class ViewModel extends ChangeNotifier {
     _game.restartGame();
     notifyListeners();
   }
+
+  void getTopMarks() {
+    _game.getTopMarks();
+    notifyListeners();
+  }
 }
