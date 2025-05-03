@@ -1,6 +1,6 @@
 # GuessTheNumber
 
-<img width="1512" alt="Captura de pantalla 2025-05-03 a las 16 05 50" src="https://github.com/user-attachments/assets/9332b7d9-f225-4cd5-b131-994e3c5c4c87" />
+<img width="1221" alt="Captura de pantalla 2025-05-03 a las 16 08 58" src="https://github.com/user-attachments/assets/a9224f30-466b-4c31-9770-7974d01d892a" />
 
 ## Estructura del Projecte
 
