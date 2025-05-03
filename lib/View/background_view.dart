@@ -26,7 +26,6 @@ class BackgroundView extends StatelessWidget {
               Spacer(),
               TextButton(
                 onPressed: () {
-                  appState.restartGame();
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => const MarksView()),

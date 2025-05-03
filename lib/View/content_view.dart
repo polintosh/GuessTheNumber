@@ -81,9 +81,12 @@ class _ContentViewState extends State<ContentView> {
             actions: [
               ElevatedButton(
                 onPressed: () {
-                  setState(() {
-                    appState.reset();
-                  });
+                  // Save the current total score
+                  appState.saveScore();
+                  // Reset for the next round
+                  appState.reset();
+                  // Rebuild the content view to show new target value
+                  setState(() {}); 
                   Navigator.pop(context);
                 },
                 child: const Text("OK"),

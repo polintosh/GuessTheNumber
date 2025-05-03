@@ -41,11 +41,17 @@ class Game {
     _rounds = 0;
   }
 
-  void addMark(int score) {
-    marks.add(Mark(score: score, dateTime: DateTime.now()));
+  void addMark(int points) {
+    marks.add(Mark(score: points, dateTime: DateTime.now()));
     marks.sort((a, b) => b.score.compareTo(a.score));
     if (marks.length > 5) {
       marks = marks.sublist(0, 5);
+    }
+  }
+
+  void saveCurrentScore() {
+    if (_points > 0) {
+      addMark(_points);
     }
   }
 

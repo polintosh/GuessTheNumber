@@ -28,6 +28,12 @@ class ViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
+  void saveScore() {
+    _game.saveCurrentScore();
+    // Optionally notify listeners if other UI parts need to react instantly to mark changes
+    // notifyListeners(); 
+  }
+
   List<Mark> getTopMarks() {
     return _game.getTopMarks();
   }
