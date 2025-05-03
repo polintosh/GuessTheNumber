@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_guess_the_number/View/Components/marks_view.dart';
-import 'package:flutter_guess_the_number/View/Components/number_view.dart';
-import 'package:flutter_guess_the_number/View/Components/rounded_view.dart';
-import 'package:flutter_guess_the_number/ViewModel/view_model.dart';
+import 'package:flutter_guess_the_number/view/components/marks_view.dart';
+import 'package:flutter_guess_the_number/view/components/number_view.dart';
+import 'package:flutter_guess_the_number/view/components/rounded_view.dart';
+import 'package:flutter_guess_the_number/viewmodel/view_model.dart';
 import 'package:provider/provider.dart';
 
 class BackgroundView extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_guess_the_number/Model/app_colors.dart';
+import 'package:flutter_guess_the_number/model/app_colors.dart';
 
 class SliderWidget extends StatelessWidget {
   final double value;

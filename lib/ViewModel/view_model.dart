@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_guess_the_number/Model/game.dart';
+import 'package:flutter_guess_the_number/model/game.dart';
+import 'package:flutter_guess_the_number/model/mark.dart';
 
 class ViewModel extends ChangeNotifier {
   final Game _game = Game();
@@ -24,8 +25,7 @@ class ViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-  void getTopMarks() {
-    _game.getTopMarks();
-    notifyListeners();
+  List<Mark> getTopMarks() {
+    return _game.getTopMarks();
   }
 }
