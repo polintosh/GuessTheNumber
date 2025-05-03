@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_guess_the_number/View/marks_view.dart';
-import 'package:flutter_guess_the_number/View/number_view.dart';
-import 'package:flutter_guess_the_number/View/rounded_view.dart';
+import 'package:flutter_guess_the_number/View/Components/marks_view.dart';
+import 'package:flutter_guess_the_number/View/Components/number_view.dart';
+import 'package:flutter_guess_the_number/View/Components/rounded_view.dart';
 import 'package:flutter_guess_the_number/ViewModel/view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -12,7 +12,7 @@ class BackgroundView extends StatelessWidget {
   Widget build(BuildContext context) {
     var appState = context.watch<ViewModel>();
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.fromLTRB(20, 50, 20, 40),
       child: Column(
         children: [
           Row(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_guess_the_number/View/slider_widget.dart';
+import 'package:flutter_guess_the_number/View/Components/slider_widget.dart';
 import 'package:flutter_guess_the_number/ViewModel/view_model.dart';
 import 'package:flutter_guess_the_number/Model/app_colors.dart';
 import 'package:provider/provider.dart';

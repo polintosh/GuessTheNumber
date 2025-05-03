@@ -1,7 +1,9 @@
 import 'dart:math';
 
 class Game {
+  // ignore: non_constant_identifier_names
   static final int MIN_VALUE = 0;
+  // ignore: non_constant_identifier_names
   static final int MAX_VALUE = 100;
 
   int _targetValue = 0;
