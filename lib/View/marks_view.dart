@@ -6,8 +6,8 @@ class MarksView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Marks"),),
-      body: Text("here the marks"));
+      appBar: AppBar(title: Text("Marks")),
+      body: Text("here the marks"),
+    );
   }
 }

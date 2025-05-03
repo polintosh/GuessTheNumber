@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_guess_the_number/game.dart';
+import 'package:flutter_guess_the_number/Model/game.dart';
 
 class ViewModel extends ChangeNotifier {
   final Game _game = Game();
-
 
   int get score => _game.score;
   int get rounds => _game.rounds;
@@ -19,9 +18,9 @@ class ViewModel extends ChangeNotifier {
     _game.reset();
     notifyListeners();
   }
+
   void restartGame() {
     _game.restartGame();
     notifyListeners();
   }
-
 }

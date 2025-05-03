@@ -7,7 +7,7 @@ class Game {
   int _targetValue = 0;
   int _points = 0;
   int _score = 0;
-  int _rounds = 0;  
+  int _rounds = 0;
 
   int get score => _score;
   int get rounds => _rounds;
