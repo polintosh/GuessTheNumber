@@ -1,10 +1,8 @@
 import 'dart:math';
 
 class Game {
-  // ignore: non_constant_identifier_names
-  static final int MIN_VALUE = 0;
-  // ignore: non_constant_identifier_names
-  static final int MAX_VALUE = 100;
+  static final int minValue = 0;
+  static final int maxValue = 100;
 
   int _targetValue = 0;
   int _points = 0;
@@ -17,24 +15,24 @@ class Game {
   int get points => _points;
 
   Game() {
-    _targetValue = Random().nextInt(MAX_VALUE + 1 - MIN_VALUE) + MIN_VALUE;
+    _targetValue = Random().nextInt(maxValue + 1 - minValue) + minValue;
   }
 
   void calculatePoints(double sliderValue) {
     int sliderValueInt = sliderValue.round().toInt();
     int difference = (_targetValue - sliderValueInt).abs();
-    _points = (MAX_VALUE - difference);
+    _points = (maxValue - difference);
     _score += _points;
     _rounds++;
   }
 
   void reset() {
-    _targetValue = Random().nextInt(MAX_VALUE + 1 - MIN_VALUE) + MIN_VALUE;
+    _targetValue = Random().nextInt(maxValue + 1 - minValue) + minValue;
     _points = 0;
   }
 
   void restartGame() {
-    _targetValue = Random().nextInt(MAX_VALUE + 1 - MIN_VALUE) + MIN_VALUE;
+    _targetValue = Random().nextInt(maxValue + 1 - minValue) + minValue;
     _points = 0;
     _score = 0;
     _rounds = 0;
