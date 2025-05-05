@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_guess_the_number/model/app_colors.dart';
 import 'package:flutter_guess_the_number/viewmodel/view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -20,10 +21,8 @@ class MarksView extends StatelessWidget {
       // Barra superior de l'aplicació per a aquesta pantalla.
       appBar: AppBar(
         title: const Text('Top 5 Puntuacions'), // Títol de la barra.
-        backgroundColor:
-            Theme.of(context).colorScheme.primary, // Color de fons.
-        foregroundColor:
-            Theme.of(context).colorScheme.onPrimary, // Color del text/icones.
+        backgroundColor: AppColors.primaryColor, // Color de fons.
+        foregroundColor: Colors.white, // Color del text/icones.
       ),
       // Cos de la pantalla: una llista desplaçable de les marques.
       body: ListView.builder(
@@ -40,11 +39,11 @@ class MarksView extends StatelessWidget {
             child: ListTile(
               // Element a l'esquerra: un cercle amb el número de posició.
               leading: CircleAvatar(
-                backgroundColor: Theme.of(context).colorScheme.primary,
+                backgroundColor: AppColors.primaryColor,
                 child: Text(
                   '#${index + 1}', // Mostra el número de rànquing (1-based).
-                  style: TextStyle(
-                    color: Theme.of(context).colorScheme.onPrimary,
+                  style: const TextStyle(
+                    color: Colors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -59,7 +58,7 @@ class MarksView extends StatelessWidget {
                 // Formata la data per mostrar-la sense milisegons.
                 'Data: ${mark.dateTime.toString().split('.')[0]}',
                 style: TextStyle(
-                  color: Theme.of(context).colorScheme.secondary,
+                  color: AppColors.primaryColor,
                 ),
               ),
             ),
